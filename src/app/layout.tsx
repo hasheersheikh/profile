@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Container>
+        <Container sx={{ mx: 4 }}>
           <Box display={"flex"} alignItems={"center"} flexDirection={"column"}>
             <Box width={{ xs: "100vw", lg: "50vw", md: "80vw" }}>
               <Box width={80} position={"relative"} height={80} mt={4}>
@@ -49,7 +49,7 @@ export default function RootLayout({
 
             <Box width={{ xs: "100vw", lg: "50vw", md: "80vw" }}>
               <Divider sx={{ my: 1 }} />
-              <Tabs />
+              {/* <Tabs /> */}
               {children}
             </Box>
           </Box>

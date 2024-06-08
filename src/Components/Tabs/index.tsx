@@ -1,12 +1,13 @@
 "use client";
 
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import { styled } from "@mui/system";
 import { Tabs } from "@mui/base/Tabs";
 import { TabsList as BaseTabsList } from "@mui/base/TabsList";
 import { buttonClasses } from "@mui/base/Button";
 import { Tab as BaseTab, tabClasses } from "@mui/base/Tab";
+import Link from "next/link";
 
 const grey = {
   50: "#F3F6F9",
@@ -66,12 +67,25 @@ const TabsList = styled(BaseTabsList)(
 );
 
 const InfoTabs: FC = () => {
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const onTabChange = (v: any) => {
+    setSelectedTab(v);
+  };
   return (
     <>
-      <Tabs defaultValue={0}>
+      <Tabs onChange={onTabChange} value={selectedTab}>
         <TabsList>
-          <Tab value={0}>About</Tab>
-          <Tab value={1}>Contact</Tab>
+          <Tab value={0}>
+            <Link href={"/"} style={{ color: "white" }}>
+              About
+            </Link>
+          </Tab>
+          <Tab value={1}>
+            <Link href={"/contact"} style={{ color: "white" }}>
+              Contact
+            </Link>
+          </Tab>
         </TabsList>
       </Tabs>
     </>
