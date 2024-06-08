@@ -1,5 +1,5 @@
 import SocialIcons from "@/Components/Social";
-import Tabs from "@/Components/Tabs";
+import profile from "../../public/profile.png";
 import { Box, Container, Divider } from "@mui/material";
 import Image from "next/image";
 
@@ -21,7 +21,7 @@ export default function RootLayout({
             <Box width={{ xs: "100vw", lg: "50vw", md: "80vw" }}>
               <Box width={80} position={"relative"} height={80} mt={4}>
                 <Image
-                  src="/profile.png"
+                  src={profile}
                   unoptimized
                   alt=""
                   fill
