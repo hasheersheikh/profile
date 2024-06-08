@@ -22,6 +22,7 @@ export default function RootLayout({
               <Box width={80} position={"relative"} height={80} mt={4}>
                 <Image
                   src="/profile.png"
+                  unoptimized
                   alt=""
                   fill
                   style={{ borderRadius: 50 }}
