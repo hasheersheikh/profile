@@ -80,7 +80,9 @@ export default function Home() {
         Experience
       </Typography>
       {experience.map((data) => (
-        <Timeline data={data} />
+        <Box key={data.position}>
+          <Timeline data={data} />
+        </Box>
       ))}
 
       <Typography variant="h5" fontFamily={"monospace"} sx={{ mt: 2 }}>
