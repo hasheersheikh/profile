@@ -100,8 +100,8 @@ export default function Home() {
               </Box>
               <Box display={"flex"} gap={2} mt={2}>
                 <Box fontFamily={"monospace"} fontSize={16}>
-                  Let's work on something together, you can book a meeting below
-                  or drop a dm on{" "}
+                  Let&apos;s work on something together, you can book a meeting
+                  below or drop a dm on{" "}
                   <a
                     target="_blank"
                     href="https://x.com/direct_messages/create/hasheersheikh"
