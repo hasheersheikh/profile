@@ -4,16 +4,12 @@ import { FC } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMdDownload } from "react-icons/io";
+import { SiLeetcode } from "react-icons/si";
 
 const SocialIcons: FC = () => {
   const onButtonClick = () => {
-    const pdfUrl = "../../../public/Resume.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Resume.pdf"; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const pdfUrl = "/Resume.pdf";
+    window.open(pdfUrl, "_blank");
   };
   return (
     <Box display={"flex"} alignItems={"center"} gap={2} my={2}>
@@ -44,11 +40,23 @@ const SocialIcons: FC = () => {
           <FaXTwitter size={30} />
         </a>
       </Tooltip>
-      {/* <Tooltip title="Resume">
-        <IconButton onClick={onButtonClick}>
+      <Tooltip title="Leetcode">
+        <a
+          href="https://leetcode.com/hasheersheikh/"
+          target="_blank"
+          style={{ color: "black" }}
+        >
+          <SiLeetcode size={30} />
+        </a>
+      </Tooltip>
+      <Tooltip title="Resume">
+        <IconButton
+          onClick={onButtonClick}
+          style={{ color: "black", padding: 0 }}
+        >
           <IoMdDownload size={30} />
         </IconButton>
-      </Tooltip> */}
+      </Tooltip>
     </Box>
   );
 };
