@@ -42,7 +42,7 @@ export default function RootLayout({
                 color={"#5d5d5d"}
                 fontFamily={"monospace"}
               >
-                Developer
+                Engineer & Designer
               </Box>
 
               <SocialIcons />
