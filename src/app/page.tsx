@@ -32,6 +32,13 @@ export default function Home() {
 
   const projects = [
     {
+      title: "To-Do App",
+      description:
+        "A simple To-Do application built with React, Go, and MongoDB. The app allows users to create, manage, and delete tasks with a clean and intuitive interface.",
+      githubLink: "https://github.com/hasheersheikh/todo-full-stack",
+      previewLink: "https://todo-full-stack-weld.vercel.app/",
+    },
+    {
       title: "Emails",
       description:
         "A simple email newsletter for tech heads using react email and resend",
